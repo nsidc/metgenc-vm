@@ -1,0 +1,11 @@
+lookup_options:
+  '^.*':
+    merge: deep
+
+classes:
+  - apt
+  - nsidc_nfs
+  - python
+
+# mounts TBD
+# nsidc_nfs::sharemounts:

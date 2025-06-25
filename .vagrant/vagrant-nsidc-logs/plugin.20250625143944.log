@@ -1,0 +1,91 @@
+2025-06-25 14:39:44 -0600: [DEBUG]: vagrant nsidc up --env=dev
+2025-06-25 14:39:44 -0600: [DEBUG]: Initial config - argv: []
+2025-06-25 14:39:44 -0600: [DEBUG]: Initial config - use_machine: true
+2025-06-25 14:39:44 -0600: [DEBUG]: Initial config - env: #<Vagrant::Environment:0x000000011e662f00>
+2025-06-25 14:39:44 -0600: [DEBUG]: Initial config - color: green
+2025-06-25 14:39:44 -0600: [DEBUG]: Initial config - environment: dev
+2025-06-25 14:39:44 -0600: [DEBUG]: Cfg::VagrantNsidcYaml: project yaml_file = /Users/collinsj/workspace/granule-metgen/vagrant-nsidc.yaml
+2025-06-25 14:39:44 -0600: [DEBUG]: Updated config - @vagrant_nsidc_yaml: #<VagrantPlugins::NSIDC::Cfg::VagrantNsidcYaml:0x00000001291f96e8>
+2025-06-25 14:39:44 -0600: [DEBUG]: Updated config - machine_name: dev-collinsj
+2025-06-25 14:39:44 -0600: [DEBUG]: Updated config - app_env: dev
+2025-06-25 14:39:44 -0600: [DEBUG]: Updated config - remaining args: []
+2025-06-25 14:39:44 -0600: [DEBUG]: Updated config - domain: dev.int.nsidc.org
+2025-06-25 14:39:44 -0600: [DEBUG]: Updated config - remaining args: []
+2025-06-25 14:39:44 -0600: [DEBUG]: Updated config - project_name: metgenc
+2025-06-25 14:39:44 -0600: [DEBUG]: Updated config - remaining args: []
+2025-06-25 14:39:44 -0600: [DEBUG]: Updated config - project_fqdn: dev.metgenc.collinsj.dev.int.nsidc.org
+2025-06-25 14:39:44 -0600: [DEBUG]: Cfg::VagrantNsidcYaml: project yaml_file = /Users/collinsj/workspace/granule-metgen/vagrant-nsidc.yaml
+2025-06-25 14:39:47 -0600: [DEBUG]: LOOKING FOR /zones/dev.int.nsidc.org/domains/dev.metgenc.collinsj.dev.int.nsidc.org/cname on vadr.apps.int.nsidc.org
+2025-06-25 14:39:48 -0600: [DEBUG]: Got response from Vadr: (404) {"zone":"dev.int.nsidc.org","ttl":null,"fqdn":"dev.metgenc.collinsj.dev.int.nsidc.org","record_type":"CNAME","rdata":{},"record_id":null,"error":"No CNAME records for dev.metgenc.collinsj.dev.int.nsidc.org found in zone dev.int.nsidc.org"}
+2025-06-25 14:39:48 -0600: [DEBUG]: DEBUG
+2025-06-25 14:39:48 -0600: [INFO]: The requested path /zones/dev.int.nsidc.org/domains/dev.metgenc.collinsj.dev.int.nsidc.org/cname was not found
+2025-06-25 14:39:48 -0600: [INFO]: No CNAME for dev.metgenc.collinsj.dev.int.nsidc.org
+2025-06-25 14:39:48 -0600: [DEBUG]: Updated config - prod_fqdn: metgenc.collinsj.dev.int.nsidc.org
+2025-06-25 14:39:51 -0600: [DEBUG]: LOOKING FOR /zones/dev.int.nsidc.org/domains/metgenc.collinsj.dev.int.nsidc.org/cname on vadr.apps.int.nsidc.org
+2025-06-25 14:39:51 -0600: [DEBUG]: Got response from Vadr: (404) {"zone":"dev.int.nsidc.org","ttl":null,"fqdn":"metgenc.collinsj.dev.int.nsidc.org","record_type":"CNAME","rdata":{},"record_id":null,"error":"No CNAME records for metgenc.collinsj.dev.int.nsidc.org found in zone dev.int.nsidc.org"}
+2025-06-25 14:39:51 -0600: [DEBUG]: DEBUG
+2025-06-25 14:39:51 -0600: [INFO]: The requested path /zones/dev.int.nsidc.org/domains/metgenc.collinsj.dev.int.nsidc.org/cname was not found
+2025-06-25 14:39:51 -0600: [INFO]: No CNAME for metgenc.collinsj.dev.int.nsidc.org
+2025-06-25 14:39:51 -0600: [DEBUG]: Updated config - provider: vsphere
+2025-06-25 14:39:51 -0600: [DEBUG]: Updated config - remaining args: []
+2025-06-25 14:39:51 -0600: [DEBUG]: Updated config - local uuid: 
+2025-06-25 14:39:51 -0600: [DEBUG]: Updated config - prod uuid: 
+2025-06-25 14:39:51 -0600: [DEBUG]: Updated config - dynect uuid: 
+2025-06-25 14:39:52 -0600: [DEBUG]: Updated config - saved state (machine.file_path): /Users/collinsj/workspace/granule-metgen/.vagrant/machines/dev-collinsj/vsphere-nsidc/nsidc-machine.yaml
+2025-06-25 14:39:52 -0600: [DEBUG]: Updated config - vagrant data dir: /Users/collinsj/workspace/granule-metgen/.vagrant/machines/dev-collinsj/vsphere
+2025-06-25 14:39:52 -0600: [DEBUG]: In subcommand.rb, argv==[]
+2025-06-25 14:39:52 -0600: [DEBUG]: In subcommand.rb, app_env==dev
+2025-06-25 14:39:52 -0600: [DEBUG]: In subcommand.rb, machine name==dev-collinsj
+2025-06-25 14:39:52 -0600: [DEBUG]: In subcommand.rb, provider==vsphere
+2025-06-25 14:39:52 -0600: [DEBUG]: Writing flat file state: {:env=>"dev", :project_name=>"metgenc"} to /Users/collinsj/workspace/granule-metgen/.vagrant/machines/dev-collinsj/vsphere-nsidc/nsidc-machine.yaml
+2025-06-25 14:39:52 -0600: [INFO]: Checking if hostname dev.metgenc.collinsj.dev.int.nsidc.org is reserved...
+2025-06-25 14:39:52 -0600: [DEBUG]: LOOKING FOR /zones/dev.int.nsidc.org/domains/dev.metgenc.collinsj.dev.int.nsidc.org/cname on vadr.apps.int.nsidc.org
+2025-06-25 14:39:52 -0600: [DEBUG]: Got response from Vadr: (404) {"zone":"dev.int.nsidc.org","ttl":null,"fqdn":"dev.metgenc.collinsj.dev.int.nsidc.org","record_type":"CNAME","rdata":{},"record_id":null,"error":"No CNAME records for dev.metgenc.collinsj.dev.int.nsidc.org found in zone dev.int.nsidc.org"}
+2025-06-25 14:39:52 -0600: [DEBUG]: DEBUG
+2025-06-25 14:39:53 -0600: [INFO]: The requested path /zones/dev.int.nsidc.org/domains/dev.metgenc.collinsj.dev.int.nsidc.org/cname was not found
+2025-06-25 14:39:53 -0600: [INFO]: Reserving hostname for metgenc in dev.int.nsidc.org.
+2025-06-25 14:39:56 -0600: [DEBUG]: LOOKING FOR /zones/dev.int.nsidc.org/domains/dev.metgenc.collinsj.dev.int.nsidc.org/cname on vadr.apps.int.nsidc.org
+2025-06-25 14:39:56 -0600: [DEBUG]: Got response from Vadr: (404) {"zone":"dev.int.nsidc.org","ttl":null,"fqdn":"dev.metgenc.collinsj.dev.int.nsidc.org","record_type":"CNAME","rdata":{},"record_id":null,"error":"No CNAME records for dev.metgenc.collinsj.dev.int.nsidc.org found in zone dev.int.nsidc.org"}
+2025-06-25 14:39:56 -0600: [DEBUG]: DEBUG
+2025-06-25 14:39:56 -0600: [INFO]: The requested path /zones/dev.int.nsidc.org/domains/dev.metgenc.collinsj.dev.int.nsidc.org/cname was not found
+2025-06-25 14:39:56 -0600: [INFO]: No CNAME for dev.metgenc.collinsj.dev.int.nsidc.org
+2025-06-25 14:39:56 -0600: [DEBUG]: LOOKING FOR /zones/dev.int.nsidc.org/domains/vmslushypiste.dev.int.nsidc.org/a on vadr.apps.int.nsidc.org
+2025-06-25 14:39:56 -0600: [DEBUG]: Got response from Vadr: (200) {"zone":"dev.int.nsidc.org","ttl":21600,"fqdn":"vmslushypiste.dev.int.nsidc.org","record_type":"A","rdata":{"address":"172.18.243.229"},"record_id":"99ee27a4c8f47589135d738ce23b1df9"}
+2025-06-25 14:39:56 -0600: [DEBUG]: Writing flat file state: {:env=>"dev", :project_name=>"metgenc", :hostname=>"vmslushypiste.dev.int.nsidc.org", :vmname=>"collinsj-metgenc-dev-default", :domain=>"dev.int.nsidc.org", :ip=>"172.18.243.229", :uuid=>nil, :netmask=>{"172.18.22"=>"255.255.254.0", "172.18.2[4,5]"=>"255.255.248.0"}, :gateway=>{"172.18.22"=>"172.18.225.1", "172.18.2[4,5]"=>"172.18.240.1"}, :dns_search=>["dev.int.nsidc.org", "apps.int.nsidc.org", "labs.nsidc.org", "apps.nsidc.org", "nsidc.org", "colorado.edu"], :dns_servers=>["128.138.129.76", "128.138.240.1", "128.138.130.30"]} to /Users/collinsj/workspace/granule-metgen/.vagrant/machines/dev-collinsj/vsphere-nsidc/nsidc-machine.yaml
+2025-06-25 14:39:57 -0600: [INFO]: 
+            Creating new CNAME record for dev.metgenc.collinsj.dev.int.nsidc.org in dev.int.nsidc.org,
+            pointing to vmslushypiste.dev.int.nsidc.org..."
+          
+2025-06-25 14:40:00 -0600: [DEBUG]: LOOKING FOR /zones/dev.int.nsidc.org/domains/dev.metgenc.collinsj.dev.int.nsidc.org/cname on vadr.apps.int.nsidc.org
+2025-06-25 14:40:00 -0600: [DEBUG]: Got response from Vadr: (404) {"zone":"dev.int.nsidc.org","ttl":null,"fqdn":"dev.metgenc.collinsj.dev.int.nsidc.org","record_type":"CNAME","rdata":{},"record_id":null,"error":"No CNAME records for dev.metgenc.collinsj.dev.int.nsidc.org found in zone dev.int.nsidc.org"}
+2025-06-25 14:40:00 -0600: [DEBUG]: DEBUG
+2025-06-25 14:40:00 -0600: [INFO]: The requested path /zones/dev.int.nsidc.org/domains/dev.metgenc.collinsj.dev.int.nsidc.org/cname was not found
+2025-06-25 14:40:00 -0600: [INFO]: No CNAME for dev.metgenc.collinsj.dev.int.nsidc.org
+2025-06-25 14:40:00 -0600: [INFO]: Calling PUT for /zones/dev.int.nsidc.org/domains/dev.metgenc.collinsj.dev.int.nsidc.org/cname/vmslushypiste.dev.int.nsidc.org on vadr.apps.int.nsidc.org
+2025-06-25 14:41:08 -0600: [INFO]: Updating network settings...
+2025-06-25 14:41:08 -0600: [DEBUG]: Writing flat file state: {:env=>"dev", :project_name=>"metgenc", :hostname=>"vmslushypiste.dev.int.nsidc.org", :vmname=>"collinsj-metgenc-dev-default", :domain=>"dev.int.nsidc.org", :ip=>"172.18.243.229", :uuid=>nil, :netmask=>"255.255.248.0", :gateway=>"172.18.240.1", :dns_search=>["dev.int.nsidc.org", "apps.int.nsidc.org", "labs.nsidc.org", "apps.nsidc.org", "nsidc.org", "colorado.edu"], :dns_servers=>["128.138.129.76", "128.138.240.1", "128.138.130.30"]} to /Users/collinsj/workspace/granule-metgen/.vagrant/machines/dev-collinsj/vsphere-nsidc/nsidc-machine.yaml
+2025-06-25 14:41:09 -0600: [DEBUG]: Executing capability VagrantPlugins::NSIDC::Cap::Ubuntu::Network.
+2025-06-25 14:41:09 -0600: [DEBUG]: 
+            Machine thinks its hostname is noble64,
+            actual hostname is vmslushypiste.dev.int.nsidc.org.
+          
+2025-06-25 14:41:12 -0600: [INFO]: Waiting awhile for vsphere to get the updated network settings...
+2025-06-25 14:41:42 -0600: [INFO]: Attempting machine communication to see if it's ready yet...
+2025-06-25 14:41:43 -0600: [DEBUG]: Marking capability VagrantPlugins::NSIDC::Cap::Ubuntu::Network as executed.
+2025-06-25 14:41:44 -0600: [INFO]: Adding FQDN to ubuntu vm...
+2025-06-25 14:41:44 -0600: [DEBUG]: Executing capability VagrantPlugins::NSIDC::Cap::SetFqdn.
+2025-06-25 14:41:47 -0600: [DEBUG]: Marking capability VagrantPlugins::NSIDC::Cap::SetFqdn as executed.
+2025-06-25 14:41:48 -0600: [INFO]: Setting the facter fact "provisioned_by"...
+2025-06-25 14:41:49 -0600: [DEBUG]: Executing capability VagrantPlugins::NSIDC::Cap::FacterProvisionedBy.
+2025-06-25 14:41:50 -0600: [DEBUG]: Marking capability VagrantPlugins::NSIDC::Cap::FacterProvisionedBy as executed.
+2025-06-25 15:14:18 -0600: [INFO]: There was an exception during native_execute: There was an error when attempting to rsync a synced folder.
+Please inspect the error message below for more info.
+
+Host path: /Users/collinsj/workspace/granule-metgen/
+Guest path: /vagrant
+Command: "rsync" "--verbose" "--archive" "--delete" "-z" "--copy-links" "--no-owner" "--no-group" "--rsync-path" "sudo rsync" "-e" "ssh -p 22 -o LogLevel=FATAL   -o ControlMaster=auto -o ControlPath=/var/folders/_s/3gn7xp1x3rb90nwjtvl63c_r0000gs/T/vagrant-rsync-20250625-14297-gmrlhe -o ControlPersist=10m  -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i '/Users/collinsj/.ssh/id_rsa_vagrant_vsphere_last' -i '/Users/collinsj/.ssh/id_rsa_vagrant_vsphere'" "--exclude" ".vagrant/" "/Users/collinsj/workspace/granule-metgen/" "vagrant@172.18.243.229:/vagrant"
+Error: rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at rsync.c(763) [sender=3.4.1]
+2025-06-25 15:14:18 -0600: [DEBUG]: Tried to remove yaml state while vagrant id file exists.
+2025-06-25 15:14:18 -0600: [DEBUG]: Writing flat file state: {:env=>"dev", :project_name=>"metgenc", :hostname=>"vmslushypiste.dev.int.nsidc.org", :vmname=>"collinsj-metgenc-dev-default", :domain=>"dev.int.nsidc.org", :ip=>"172.18.243.229", :uuid=>"4205d1e0-0527-2d8d-041c-39fa17c7f307", :netmask=>"255.255.248.0", :gateway=>"172.18.240.1", :dns_search=>["dev.int.nsidc.org", "apps.int.nsidc.org", "labs.nsidc.org", "apps.nsidc.org", "nsidc.org", "colorado.edu"], :dns_servers=>["128.138.129.76", "128.138.240.1", "128.138.130.30"]} to /Users/collinsj/workspace/granule-metgen/.vagrant/machines/dev-collinsj/vsphere-nsidc/nsidc-machine.yaml
+2025-06-25 15:14:18 -0600: [INFO]: Updating DNS database record for vmslushypiste.dev.int.nsidc.org with username 'collinsj', VM name 'collinsj-metgenc-dev-default', uuid '4205d1e0-0527-2d8d-041c-39fa17c7f307', and template name 'noble64-nsidc-puppet8'.
+2025-06-25 15:14:18 -0600: [INFO]: Your CNAME points from dev.metgenc.collinsj.dev.int.nsidc.org to vmslushypiste.dev.int.nsidc.org.
