@@ -2,7 +2,14 @@
 # vi: set ft=ruby :
 require 'vagrant-nsidc/plugin'
 
-Vagrant.configure("2") do |config|
+Vagrant.configure(2) do |config|
+  memory_gb = 16
+
+  config.vm.provider :vsphere do |vsphere|
+    vsphere.memory_mb = 1024 * memory_gb
+    vsphere.cpu_count = 4
+  end
+
   config.vm.provision :shell do |s|
     s.name = 'apt-get update'
     s.inline = 'apt-get update'

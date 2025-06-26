@@ -1,0 +1,21 @@
+# Added to get around "facter" not found python error.
+export PATH=/opt/puppetlabs/bin:$PATH
+
+# Set metgenc specific environment variables
+export EARTHDATA_USERNAME=<%= vault_get(
+  @vault_host, 
+  'nsidc/devops/NSIDC_Ops_URS_Account',
+  'username'
+) -%>
+
+export EARTHDATA_PASSWORD=<%= vault_get(
+  @vault_host, 
+  'nsidc/devops/NSIDC_Ops_URS_Account',
+  'password'
+) -%>
+
+source /etc/profile.d/miniconda.sh
+
+# Use 'source activate' instead of 'conda activate' because 'conda activate'
+# command requires a login shell with a bashrc configured by conda.
+source activate

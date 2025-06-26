@@ -1,6 +1,6 @@
 ---
 project: metgenc
-gitrepo: git@github.com:nsidc/granule-metgen.git
+gitrepo: git@github.com:nsidc/metgenc-vm.git
 vsphere:
    template:
-     default: noble64-nsidc-puppet8
+     default: jammy64-nsidc-puppet7

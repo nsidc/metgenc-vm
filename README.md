@@ -1,4 +1,4 @@
-# Template instructions (delete me)
+Template instructions (delete me)
 
 - [ ] Replace the following variables in this README:
     * `{title}`: The title of this application / repository.
@@ -27,42 +27,37 @@
 </p>
 
 
-# {title}
+# MetGenC VM
 
-{title} enables {audience} to {utility}.
+MetGenC VM provides configuration for a virtual machine used to run
+[`metgenc`](https://github.com/nsidc/granule-metgen).
 
 
 ## Level of Support
 
-* This repository is fully supported by NSIDC. If you discover any problems or bugs,
-  please submit an Issue. If you would like to contribute to this repository, you may fork
-  the repository and submit a pull request. 
-* This repository is not actively supported by NSIDC but we welcome issue submissions and
-  pull requests in order to foster community contribution.
+This repository is not (yet) actively supported by NSIDC but we welcome issue submissions and
+pull requests in order to foster community contribution.
 
-See the [LICENSE](LICENSE) for details on permissions and warranties. Please contact
+See the [LICENSE](LICENSE.md) for details on permissions and warranties. Please contact
 nsidc@nsidc.org for more information.
 
 
 ## Requirements
 
-{requirements}
+Vagrant, `vagrant-vsphere`, the `vagrant-nsidc` plugin, and access to the NSIDC VPN.
 
 
 ## Installation
 
-{installation}
-
+TODO
 
 ## Usage
 
-{usage}
-
+TODO
 
 ## Troubleshooting
 
-{troubleshooting}
-
+TODO
 
 ## Credit
 

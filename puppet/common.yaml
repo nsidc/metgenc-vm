@@ -1,11 +1,17 @@
-lookup_options:
-  '^.*':
-    merge: deep
-
 classes:
-  - apt
   - nsidc_nfs
-  - python
+  - nsidc_miniconda
 
 # mounts TBD
 # nsidc_nfs::sharemounts:
+
+nsidc_miniconda::install:
+  /opt/miniconda:
+    version: '25.3.1-1'
+    python_version: '3'
+    config:
+      channels:
+        anaconda_nsidc_main: true
+        conda_forge: true
+        extra:
+          - nodefaults
