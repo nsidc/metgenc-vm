@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :shell do |s|
     s.name = 'librarian-puppet install'
-    s.inline = 'cd /vagrant/puppet && librarian-puppet install --path=./modules'
+    s.inline = 'cd /vagrant/puppet && librarian-puppet install --path=./modules --verbose'
   end
 
   config.vm.provision :puppet do |puppet|

@@ -3,6 +3,8 @@ lookup('classes', {merge => unique}).include
 $vault_host = 'vault.apps.int.nsidc.org'
 
 $project = 'metgenc'
+$package = 'nsidc-metgenc'
+$version = '1.7.0'
 
 # Location for running metgenc
 file {"/home/vagrant/${project}":
@@ -14,10 +16,10 @@ file {"/home/vagrant/${project}":
 
 # Contains environment variable setup and activation of conda environment for
 # non-login shells (e.g., ops jobs)
-file {'metgenc-env.sh':
+file {"${project}-init.sh":
   ensure  => present,
-  content => vault_template('/vagrant/puppet/files/metgenc-env.erb'),
-  path    => '/etc/profile.d/metgenc-env.sh',
+  content => vault_template("/vagrant/puppet/files/${project}-init.erb"),
+  path    => "/etc/profile.d/${project}-init.sh",
 }
 
 file {'/home/vagrant/.aws':
@@ -51,6 +53,37 @@ file {'.conda dir':
   group   => 'vagrant'
 }
 
+file {"/home/vagrant/${project}/data":
+  ensure => directory,
+  owner => 'vagrant',
+  group => 'vagrant',
+  require => [File["/home/vagrant/${project}"]],
+}
+file {"/home/vagrant/${project}/init":
+  ensure => directory,
+  owner => 'vagrant',
+  group => 'vagrant',
+  require => [File["/home/vagrant/${project}"]],
+}
+file {"/home/vagrant/${project}/output":
+  ensure => directory,
+  owner => 'vagrant',
+  group => 'vagrant',
+  require => [File["/home/vagrant/${project}"]],
+}
+file {"/home/vagrant/${project}/premet":
+  ensure => directory,
+  owner => 'vagrant',
+  group => 'vagrant',
+  require => [File["/home/vagrant/${project}"]],
+}
+file {"/home/vagrant/${project}/spatial":
+  ensure => directory,
+  owner => 'vagrant',
+  group => 'vagrant',
+  require => [File["/home/vagrant/${project}"]],
+}
+
 exec {'conda-init':
   command => 'conda init bash',
   path    => '/opt/miniconda/bin/:/bin/',
@@ -62,7 +95,7 @@ exec {'conda-init':
 exec { 'install-python-3.12':
   command => 'conda install python=3.12',
   path    => '/opt/miniconda/bin/:/bin/',
-  require => [File['metgenc-env.sh'],
+  require => [File["${project}-init.sh"],
               File["/home/vagrant/${project}"],
               Exec['conda-init']],
 }
@@ -76,8 +109,8 @@ exec { 'install-venv':
 }
 
 exec { 'install-metgenc':
-  command => '. activate && pip install nsidc-metgenc',
-  path    => '/home/vagrant/dpt-metgenc/.venv/bin/:/bin/',
+  command => ". activate && pip install ${package}==${version}",
+  path    => "/home/vagrant/${project}/.venv/bin/:/bin/",
   provider => 'shell',
   timeout     => 1800,
   require => Exec['install-venv']
