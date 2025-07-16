@@ -111,17 +111,6 @@ exec { 'install-venv':
   require => Exec['install-python-3.12']
 }
 
-# Workaround for dependency conflicts between earthaccess and metgenc
-#exec { 'install-s3fs':
-#  command => ". activate && pip install s3fs==2024.10.0",
-#  path    => "/home/vagrant/${project}/.venv/bin/:/bin/",
-#  provider => 'shell',
-#  user     => 'vagrant',
-#  group    => 'vagrant',
-#  timeout     => 1800,
-#  require => Exec['install-venv']
-#}
-#
 exec { 'install-metgenc':
   command => ". activate && pip install ${package}",
   path    => "/home/vagrant/${project}/.venv/bin/:/bin/",
@@ -143,5 +132,9 @@ exec { 'upgrade-metgenc':
 }
 
 package { 'awscli':
+  ensure => 'installed',
+}
+
+package { 'jq':
   ensure => 'installed',
 }
