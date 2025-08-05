@@ -8,6 +8,22 @@ nsidc_nfs::sharemounts:
     project: apps
     share: snow-today
     options: ro
+  /share/apps/sipsmetgen:
+    project: apps
+    share: sipsmetgen
+    options: ro
+  /share/apps/ops_scripts:
+    project: apps
+    share: ops_scripts
+    options: ro
+  /share/apps/nsidc0081:
+    project: apps
+    share: nsidc0081
+    options: ro
+  /share/apps/G02202:
+    project: apps
+    share: G02202
+    options: ro
 
 nsidc_miniconda::install:
   /opt/miniconda:
