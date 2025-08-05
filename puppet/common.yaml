@@ -2,8 +2,12 @@ classes:
   - nsidc_nfs
   - nsidc_miniconda
 
-# mounts TBD
-# nsidc_nfs::sharemounts:
+# mounts
+nsidc_nfs::sharemounts:
+  /share/apps/snow-today:
+    project: apps
+    share: snow-today
+    options: ro
 
 nsidc_miniconda::install:
   /opt/miniconda:
