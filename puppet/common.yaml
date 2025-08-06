@@ -2,10 +2,25 @@ classes:
   - nsidc_nfs
   - nsidc_miniconda
 
-# mounts
+# mounts requested by Ops users
 nsidc_nfs::sharemounts:
   /share/apps:
     project: apps
+    options: ro
+
+  /disks/restricted_ftp:
+    project: restricted
+    options: ro
+
+  /disks/sidads_ftp:
+    project: FTP
+
+  /disks/sidads_staging:
+    project: staging
+    options: ro
+
+  /ecs:
+    project: ecs
     options: ro
 
 nsidc_miniconda::install:
