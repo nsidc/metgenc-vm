@@ -20,7 +20,7 @@ nsidc@nsidc.org for more information.
 
 ## Requirements
 
-* Vagrant, (`vagrant-vsphere`)[https://github.com/nsidc/vagrant-vsphere], the `vagrant-nsidc`
+* Vagrant, [`vagrant-vsphere`](https://github.com/nsidc/vagrant-vsphere), the `vagrant-nsidc`
   plugin, and access to the NSIDC VPN or internal network.
 * Ruby and bundler, for version bumping. Ruby tools are used here based on the
   fact that `vagrant-nsidc` is Ruby-based. Whether other solutions are better is
@@ -42,12 +42,12 @@ something else) are TBD.
 
 * Ensure you have
     [Ruby](https://www.ruby-lang.org/en/documentation/installation/) installed.
-    (rbenv)[https://github.com/rbenv/rbenv#readme] is recommended to manage your
+    [rbenv](https://github.com/rbenv/rbenv#readme) is recommended to manage your
     Ruby versions.
 * Install `bundler`: `gem install bundler`
 * Install remaining gem(s) (only `bump` currently): `bundle install`
 * `bump --help` will show all commands.
-* Add a description of the changes to the `Next` section in the (CHANGELOG.md)[CHANGELOG.md].
+* Add a description of the changes to the `Next` section in the [CHANGELOG.md](CHANGELOG.md).
 * Run `bump <level> --changelog --tag` where `<level>` is `pre`, `patch`, `minor`, or `major`
 * Do a `git push` to update the remote repository.
 
