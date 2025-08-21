@@ -48,7 +48,7 @@ something else) are TBD.
 * Install remaining gem(s) (only `bump` currently): `bundle install`
 * `bump --help` will show all commands.
 * Add a description of the changes to the `Next` section in the [CHANGELOG.md](CHANGELOG.md).
-* Run `bump <level> --changelog --tag` where `<level>` is `pre`, `patch`, `minor`, or `major`
+* Run `bump <level> --changelog --tag --tag-prefix ""` where `<level>` is `pre`, `patch`, `minor`, or `major`
 * Do a `git push` to update the remote repository.
 
 ## Credit
