@@ -6,22 +6,25 @@ classes:
 nsidc_nfs::sharemounts:
   /share/apps:
     project: apps
-    options: ro
+    options: rw
 
   /disks/restricted_ftp:
     project: restricted
-    options: ro
 
   /disks/sidads_ftp:
     project: FTP
 
   /disks/sidads_staging:
     project: staging
-    options: ro
 
   /ecs:
     project: ecs
     options: ro
+
+  /share/logs/metgenc:
+    project: logs
+    share: "metgenc"
+    options: rw
 
 nsidc_miniconda::install:
   /opt/miniconda:
