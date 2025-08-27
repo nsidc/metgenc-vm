@@ -1,4 +1,5 @@
 ### Next
+### v0.3.0 - 2025-08-27
 
 - Issue-273: Update templates for AWS config and credentials files to include
     profiles for both UAT and PROD.
