@@ -1,0 +1,13 @@
+/share/logs/metgenc/metgenc*.log {
+  compress
+  rotate 5
+  olddir /share/logs/metgenc/archive/<%= @environment %>
+  copytruncate
+  nocreate
+  daily
+  start 0
+  nodateext
+  ifempty
+  missingok
+  su vagrant vagrant
+}
