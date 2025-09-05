@@ -84,17 +84,10 @@ file {"/home/vagrant/${project}/spatial":
   require => [File["/home/vagrant/${project}"]],
 }
 
-# Log handling
-$environment_dir = $environment ? {
-    'blue'  => 'production',
-    default => $environment
-}
-
 $log_source = '/share/logs/metgenc'
 $log_archive = "${log_source}/archive"
-$log_archive_environment = "${log_archive}/${environment_dir}"
 
-file { "$log_archive_environment":
+file { "$log_archive":
   ensure  => directory,
   owner  => 'vagrant',
   group  => 'vagrant',
@@ -105,7 +98,7 @@ file { "$log_archive_environment":
 file { '/etc/logrotate.d/metgenc':
    ensure  => file,
    content => template('/vagrant/puppet/files/logrotate_metgenc.erb'),
-   require => [Nsidc_nfs::Sharemount[$log_source], File[$log_archive_environment]]
+   require => [Nsidc_nfs::Sharemount[$log_source], File[$log_archive]]
 }
 
 exec {'conda-init':

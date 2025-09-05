@@ -51,6 +51,29 @@ something else) are TBD.
 * Run `bump <level> --changelog --tag --tag-prefix ""` where `<level>` is `pre`, `patch`, `minor`, or `major`
 * Do a `git push` to update the remote repository.
 
+## Logs
+
+`/share/logs/metgenc` is NFS-mounted on the `metgenc` VM. The `logrotate`
+utility is configured to rotate any files named `*.log` in that location
+to an archive location at `share/logs/metgenc/archive`. 
+
+The file `puppet/files/logrotate_metgenc.erb` stores the logrotate
+configuration, which is rendered to `/etc/logrotate.d/metgenc` when the VM is
+provisioned.
+
+### Checking `logrotate` configuration and recent execution
+
+```
+sudo grep metgenc /var/lib/logrotate/status # See recent logrotate activity specific to metgenc
+sudo logrotate -d /etc/logrotate.d/metgenc  # Perform a dry run, with verbose output
+```
+
+### Manually running `logrotate`
+
+```
+sudo logrotate -fv /etc/logrotate.d/metgenc # -v flag increases output verbosity
+```
+
 ## Credit
 
 This content was developed by the National Snow and Ice Data Center with funding from
