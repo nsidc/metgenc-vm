@@ -28,7 +28,7 @@ nsidc_nfs::sharemounts:
 
 nsidc_miniconda::install:
   /opt/miniconda:
-    version: '25.3.1-1'
+    version: 'py312_25.3.1-1'
     python_version: '3'
     config:
       channels:
