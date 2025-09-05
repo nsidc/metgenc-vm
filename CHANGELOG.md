@@ -1,4 +1,5 @@
 ## Next
+## v0.4.0 - 2025-09-05
 
 - Issue-276: Add logrotate configuration.
 
