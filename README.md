@@ -39,7 +39,7 @@ Tag the branch so there's a record of the configuration used to build the
 specified environment:
 
 ```
-git tag -f <env> # environment is one of dev, qa, staging, blue
+git tag -f <env> # Where <env> is one of dev, qa, staging, blue
 git push --follow-tags
 ```
 
