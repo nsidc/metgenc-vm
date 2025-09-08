@@ -1,4 +1,5 @@
 ## Next
+## v0.5.0 - 2025-09-08
 
 - Issue-284: Install `postgresql` command-line tools via
   `puppetlabs-postgresql`.
