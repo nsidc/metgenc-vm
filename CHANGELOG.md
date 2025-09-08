@@ -1,4 +1,8 @@
 ## Next
+
+- Issue-284: Install `postgresql` command-line tools via
+  `puppetlabs-postgresql`.
+
 ## v0.4.0 - 2025-09-05
 
 - Issue-276: Add logrotate configuration.

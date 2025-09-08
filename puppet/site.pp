@@ -155,3 +155,15 @@ package { 'awscli':
 package { 'jq':
   ensure => 'installed',
 }
+
+class { 'postgresql::globals':
+  manage_package_repo => true,
+  version             => '16',
+} ->
+
+class { 'postgresql::client':
+} ->
+
+package { 'libpq-dev':
+  ensure => 'present'
+}
