@@ -35,8 +35,17 @@ nsidc@nsidc.org for more information.
 vagrant nsidc up --env [dev|qa|staging|blue]
 ```
 
-Details of VM delivery to users (e.g. using a "blue-green swap" approach or
-something else) are TBD.
+Tag the branch so there's a record of the configuration used to build the
+specified environment:
+
+```
+git tag -f <env> # environment is one of dev, qa, staging, blue
+git push --follow-tags
+```
+
+If the environment in question is `blue`, submit a Production Change Tracker
+(PCT) request for a blue-green swap to deploy the new production VM.
+
 
 ## Releasing a new version
 
@@ -49,7 +58,7 @@ something else) are TBD.
 * `bump --help` will show all commands.
 * Add a description of the changes to the `Next` section in the [CHANGELOG.md](CHANGELOG.md).
 * Run `bump <level> --changelog --tag --tag-prefix ""` where `<level>` is `pre`, `patch`, `minor`, or `major`
-* Do a `git push` to update the remote repository.
+* Do a `git push --follow-tags` to update the remote repository.
 
 ## Logs
 
