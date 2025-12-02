@@ -40,7 +40,7 @@ specified environment:
 
 ```
 git tag -f <env> # Where <env> is one of dev, qa, staging, blue
-git push --follow-tags
+git push --tags
 ```
 
 If the environment in question is `blue`, submit a Production Change Tracker
