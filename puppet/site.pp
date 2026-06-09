@@ -113,6 +113,8 @@ exec {'conda-init':
 exec { 'install-python-3.12':
   command => 'conda install python=3.12',
   path    => '/opt/miniconda/bin/:/bin/',
+  user    => 'vagrant',
+  group   => 'vagrant',
   require => [File["${project}-init.sh"],
               File["/home/vagrant/${project}"],
               Exec['conda-init']],
@@ -148,10 +150,6 @@ exec { 'upgrade-metgenc':
   require => Exec['install-metgenc']
 }
 
-package { 'awscli':
-  ensure => 'installed',
-}
-
 package { 'jq':
   ensure => 'installed',
 }
@@ -166,4 +164,12 @@ class { 'postgresql::client':
 
 package { 'libpq-dev':
   ensure => 'present'
+}
+
+file { 'aws-cli':
+  path    => '/usr/local/aws-cli',
+  ensure  => directory,
+  recurse => true,
+  owner   => 'vagrant',
+  group   => 'vagrant',
 }

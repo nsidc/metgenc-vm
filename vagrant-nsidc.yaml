@@ -3,4 +3,4 @@ project: metgenc
 gitrepo: git@github.com:nsidc/metgenc-vm.git
 vsphere:
    template:
-     default: jammy64-nsidc-puppet7
+     default: noble64-nsidc-sec-puppet8
