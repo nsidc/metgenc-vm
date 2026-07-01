@@ -32,7 +32,7 @@ nsidc@nsidc.org for more information.
 * From the root of this repository's workspace, do:
 
 ```
-vagrant nsidc up --env [dev|qa|staging|blue]
+vagrant nsidc up --env=[dev|qa|staging|blue]
 ```
 
 Tag the branch so there's a record of the configuration used to build the
