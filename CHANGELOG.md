@@ -1,4 +1,8 @@
 ## Next
+## v1.0.0 - 2026-07-01
+
+- PSS-700: Use secure templates for VM build; update version of AWS CLI; remove OBE `ecs` mount.
+
 ## v0.5.0 - 2025-09-08
 
 - Issue-284: Install `postgresql` command-line tools via
