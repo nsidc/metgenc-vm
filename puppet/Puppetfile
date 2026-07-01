@@ -16,3 +16,5 @@ mod "nsidc/nsidc_vault_client",
   :ref => "v1.0.0"
 
 mod "puppetlabs-postgresql", "10.5.0"
+
+mod "tobixen-awscli2", "0.5.0"
