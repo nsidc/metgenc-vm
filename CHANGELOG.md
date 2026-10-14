@@ -1,4 +1,8 @@
 ## Next
+
+- PSS-729: Mount `/disks/sftponly` as part of VM build.
+- Add configuration for `integration` VM build for testing purposes.
+
 ## v1.0.0 - 2026-07-01
 
 - PSS-700: Use secure templates for VM build; update version of AWS CLI; remove OBE `ecs` mount.
