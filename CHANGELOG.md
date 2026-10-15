@@ -1,4 +1,5 @@
 ## Next
+## v1.1.0 - 2026-10-15
 
 - PSS-729: Mount `/disks/sftponly` as part of VM build.
 - Add configuration for `integration` VM build for testing purposes.
