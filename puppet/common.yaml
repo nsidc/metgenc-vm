@@ -23,6 +23,11 @@ nsidc_nfs::sharemounts:
     share: "metgenc"
     options: rw
 
+nsidc_nfs::nfsmounts:
+  /disks/sftponly:
+    nfsexport: /ifs/nfs/sftponly
+    nfsserver: snowbox.apps.int.nsidc.org
+
 nsidc_miniconda::install:
   /opt/miniconda:
     version: 'py312_25.3.1-1'
