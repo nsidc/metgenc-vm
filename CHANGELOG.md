@@ -1,4 +1,5 @@
 ## Next
+## v1.2.0 - 2026-10-21
 
 - Issue-365: Ensure the latest version of `pip` is used in the VM's `python`
   environment. These changes are in response to the eMudhra certificate
