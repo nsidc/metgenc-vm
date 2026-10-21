@@ -101,7 +101,7 @@ file { '/etc/logrotate.d/metgenc':
    require => [Nsidc_nfs::Sharemount[$log_source], File[$log_archive]]
 }
 
-exec {'conda-init':
+exec { 'conda-init':
   command => 'conda init bash',
   path    => '/opt/miniconda/bin/:/bin/',
   user    => 'vagrant',
@@ -120,14 +120,22 @@ exec { 'install-python-3.12':
               Exec['conda-init']],
 }
 
+exec { 'conda-update':
+  command => 'conda update --all',
+  path    => '/opt/miniconda/bin/:/bin/',
+  user    => 'vagrant',
+  group   => 'vagrant',
+  require => Exec['install-python-3.12']
+}
+
 exec { 'install-venv':
-  command  => "python -m venv /home/vagrant/${project}/.venv",
+  command  => "python -m venv --upgrade-deps /home/vagrant/${project}/.venv",
   path     => '/opt/miniconda/bin/:/bin/',
   provider => 'shell',
   user     => 'vagrant',
   group    => 'vagrant',
   # timeout     => 1800,
-  require => Exec['install-python-3.12']
+  require => Exec['conda-update']
 }
 
 exec { 'install-metgenc':
