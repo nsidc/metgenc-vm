@@ -1,4 +1,9 @@
 ## Next
+
+- Issue-365: Ensure the latest version of `pip` is used in the VM's `python`
+  environment. These changes are in response to the eMudhra certificate
+  compromise.
+
 ## v1.1.0 - 2026-10-15
 
 - PSS-729: Mount `/disks/sftponly` as part of VM build.
