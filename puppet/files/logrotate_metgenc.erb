@@ -1,7 +1,7 @@
-/share/logs/metgenc/metgenc*.log {
+<%= @log_path %>/metgenc*.log {
   compress
   rotate -1
-  olddir /share/logs/metgenc/archive
+  olddir <%= @log_archive %>
   nocopytruncate
   nocreate
   daily

@@ -1,4 +1,8 @@
 ## Next
+
+- Issue-364/PSS-698: Configure VM to store logs in an environment-specific
+  location for integration, qa, and dev builds.
+
 ## v1.2.0 - 2026-10-21
 
 - Issue-365: Ensure the latest version of `pip` is used in the VM's `python`
