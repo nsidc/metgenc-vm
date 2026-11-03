@@ -1,4 +1,9 @@
 ## Next
+
+- Issue-310/PSS-698: Configure VM to store logs in an environment-specific
+  location for integration, qa, and dev builds so log rotation can be tested
+  without interfering with the default location used by staging/blue/production.
+
 ## v1.2.0 - 2026-10-21
 
 - Issue-365: Ensure the latest version of `pip` is used in the VM's `python`
